@@ -32,20 +32,29 @@ of going outside. Bless them.
 
 GRANT OF RIGHTS
 
+Subject to the two small conditions in clauses 3 and 5 — just
+the two, more would be excessive — the Author grants you the
+following:
+
 1. USAGE: You may use this software for any purpose, commercial
-   or otherwise. The Author trusts you to be reasonable about it.
+   or otherwise. The Author trusts you to be reasonable about
+   it, but that trust is a hope, not a condition. Be unreasonable
+   if you must.
 
 2. DISTRIBUTION: You may copy, merge, publish, distribute,
-   sublicense, and/or sell copies of the Software. Don't make
-   a big deal out of it in either direction. Just put it there.
+   sublicense, and/or sell copies of the Software, in original
+   or modified form. Don't make a big deal out of it in either
+   direction. Just put it there.
 
 3. ATTRIBUTION: Retain the original copyright notice in source
    files and documentation. One line is enough. Don't strip it
    out, don't put it in 40pt bold font. It's lagom.
 
 4. MODIFICATIONS: You may modify the Software. If you improve
-   the code, good. Don't rewrite it entirely and call it a fork
-   just to avoid credit. That's not lagom, that's just rude.
+   the code, good. You could even rewrite it entirely and call
+   it a fork just to avoid credit — nothing in this license
+   stops you. That is between you and your conscience. Your
+   conscience knows what lagom means.
 
 5. LICENSE INCLUSION: Include this license or a clear reference
    to it in copies of the software. It's just polite.
@@ -61,6 +70,11 @@ GRANT OF RIGHTS
    b) Take a walk sometimes
    c) Drink water
    d) Push to main on Fridays only if it feels lagom
+
+For the avoidance of doubt: only clauses 3 and 5 are actual
+requirements. Everything else that sounds like advice is
+advice. The Author cannot legally compel you to drink water.
+The Author can only hope.
 
 LIMITATIONS OF LIABILITY
 
@@ -111,10 +125,15 @@ not be lagom.
 
 TERMINATION
 
-This license is perpetual and irrevocable. It cannot be
-terminated, because termination is too dramatic. It simply
-exists, quietly, in the background, like a well-designed
-piece of Swedish furniture.
+This license is perpetual and irrevocable, because termination
+is too dramatic. It simply exists, quietly, in the background,
+like a well-designed piece of Swedish furniture.
+
+One exception: if you strip the attribution or the license
+itself (clauses 3 and 5), your rights under this license pause
+until you put them back. Not revoked — paused, like a coffee
+break you did not choose. Restore the notice and all is
+forgiven. Grudges are not lagom.
 
 FINAL WORDS
 
