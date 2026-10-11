@@ -1,0 +1,8 @@
+# Impeccable design plugin — local artifacts, never published
+.impeccable/
+PRODUCT.md
+DESIGN.md
+DESIGN.*.json
+
+# OS / editor noise
+.DS_Store

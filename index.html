@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Lagom License</title>
   <meta name="description" content="An open-source license for software that doesn't try too hard. Not too much, not too little — just the right amount of freedom.">
-  <meta name="theme-color" content="#F3EEE4" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#12151C" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F3EEE4" media="(prefers-color-scheme: light)" id="themeColorLight">
+  <meta name="theme-color" content="#12151C" media="(prefers-color-scheme: dark)" id="themeColorDark">
   <meta property="og:title" content="The Lagom License">
   <meta property="og:description" content="Not too much, not too little — just the right amount of freedom.">
   <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>
     document.documentElement.classList.add('js');
@@ -40,6 +40,7 @@
         <a href="#use">Use it</a>
       </nav>
       <div class="nav__actions">
+        <a class="nav__cta" href="#use">Get the license</a>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to Midvinter (dark)">
           <span class="theme-toggle__icon" aria-hidden="true"></span>
           <span class="theme-toggle__label" id="themeLabel">Midsommar</span>
@@ -201,22 +202,22 @@
 
         <div class="grants">
           <article class="grant reveal">
-            <span class="grant__icon" aria-hidden="true">✓</span>
+            <span class="grant__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
             <h4>Use it</h4>
             <p>For any purpose, commercial or otherwise. The Author trusts you to be reasonable. Be unreasonable if you must.</p>
           </article>
           <article class="grant reveal">
-            <span class="grant__icon" aria-hidden="true">✓</span>
+            <span class="grant__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
             <h4>Share it</h4>
             <p>Copy, publish, sublicense, sell — original or modified. Don’t make a big deal of it in either direction. Just put it there.</p>
           </article>
           <article class="grant reveal">
-            <span class="grant__icon" aria-hidden="true">✓</span>
+            <span class="grant__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
             <h4>Change it</h4>
             <p>As much as you like. Rewrite it entirely and call it a fork. That’s between you and your conscience. Your conscience knows what lagom means.</p>
           </article>
           <article class="grant grant--no reveal">
-            <span class="grant__icon" aria-hidden="true">✗</span>
+            <span class="grant__icon" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg></span>
             <h4>Not required</h4>
             <p>Sharing your modifications <span class="muted">(but hoarding is not lagom)</span>. Feeling guilty about anything <span class="muted">(guilt is never lagom)</span>.</p>
           </article>
@@ -288,7 +289,7 @@
           </article>
 
           <!-- Jantelagen -->
-          <article class="card card--jante reveal">
+          <article class="card card--jante card--quiet reveal">
             <span class="card__kicker">Jantelagen</span>
             <p class="jante">You shall not think you are better than this Software.<br>The Software does not think it is better than you.<br>Nobody here thinks they are anything special.</p>
             <p class="card__small">This card is exactly as big as it needs to be. That is the point.</p>
@@ -354,8 +355,20 @@
           <!-- Moose -->
           <article class="card card--moose reveal">
             <div class="moose-sign" aria-hidden="true">
-              <svg viewBox="0 0 120 106"><path d="M60 6 L114 100 H6Z" class="moose-sign__edge"/><path d="M60 20 L101 92 H19Z" class="moose-sign__face"/></svg>
-              <span class="moose-sign__glyph">🫎</span>
+              <svg viewBox="0 0 120 106">
+                <path d="M60 6 L114 100 H6Z" class="moose-sign__edge"/>
+                <path d="M60 20 L101 92 H19Z" class="moose-sign__face"/>
+                <g class="moose-sign__moose">
+                  <!-- body, hump and legs -->
+                  <path d="M36 66 C36 60 41 57 48 57 L66 56 C69 53 72 52 74 54 L77 60 C78 64 77 68 74 70 L73 84 L70.5 84 L70 72 L66 72 L65.5 84 L63 84 L62 71 L48 71 L46 84 L43.5 84 L43.5 72 L41.5 72 L40.5 84 L38 84 L38.5 71 C36.5 70 36 68 36 66 Z"/>
+                  <!-- neck, head, drooping snout, bell -->
+                  <path d="M72 55 L78 51 L85 52 C87 53 88 55 87.5 57.5 L86.5 61 C86 62.5 84.5 63 83 62 L80 60.5 L79 66 L77.5 63 L76 60 Z"/>
+                  <!-- palmate antlers -->
+                  <path d="M77 51.5 C73 49 70 46 70 42 L72 44 L72.5 41 L74 44 L75 41.5 L76 45 C77 47 78 49 79 50.5 Z"/>
+                  <path d="M80 51 C82 47 85 45 89 45 L87.5 47 L90.5 47.5 L88 49 L90 50.5 L86.5 50.5 C84 50.5 82.5 51.5 81.5 52.5 Z"/>
+                  <path d="M36.5 63 L33.5 66 L36.5 65.5 Z"/>
+                </g>
+              </svg>
             </div>
             <span class="card__kicker">Limitation of liability</span>
             <p>If this code deletes your database, burns your toast, causes an international incident, or collides with a moose, that is between you and your backup strategy.</p>
@@ -363,7 +376,7 @@
           </article>
 
           <!-- Surströmming -->
-          <article class="card card--fish reveal">
+          <article class="card card--fish card--quiet reveal">
             <span class="card__kicker">Hazardous materials</span>
             <div class="hazard" aria-hidden="true"><span>Legacy file</span></div>
             <p>Certain legacy files are like surströmming.</p>
@@ -388,7 +401,7 @@
           </article>
 
           <!-- Termination -->
-          <article class="card card--pause reveal">
+          <article class="card card--pause card--quiet reveal">
             <span class="card__kicker">Termination</span>
             <div class="pause" aria-hidden="true"><i></i><i></i></div>
             <h3>Paused, not revoked.</h3>
@@ -414,7 +427,7 @@
           <h2 id="fikaTitle">Using this software too much? <em>Step away. Have a fika.</em></h2>
           <p>Return when balance has been restored. Using it too little? Use it a little more. Not too much.</p>
         </div>
-        <button class="btn btn--paper" id="fikaOpen" type="button">Take a fika <span aria-hidden="true">☕</span></button>
+        <button class="btn btn--paper" id="fikaOpen" type="button">Take a fika <span aria-hidden="true">→</span></button>
       </div>
     </section>
 
@@ -441,7 +454,7 @@
             <h3>Put your name on it.</h3>
             <p>Replace the copyright line at the bottom with your own. Or type it below and we’ll do it for you.</p>
             <div class="personal">
-              <label class="field">
+              <label class="field" id="pNameField">
                 <span>Your name</span>
                 <input id="pName" type="text" placeholder="Astrid Lindgren" autocomplete="name" spellcheck="false">
               </label>
@@ -468,6 +481,7 @@
             <div>
               <p class="eyebrow">The license, in full</p>
               <p class="doc-bar__sub">A lagom length. Slightly over, actually. It knows.</p>
+              <p class="doc-bar__line" id="docLine" aria-live="polite">Copyright line: <mark id="docLineText">Copyright (c) 2026 klppl</mark></p>
             </div>
             <div class="doc-bar__actions">
               <button class="btn btn--small" type="button" id="docCopy">Copy</button>

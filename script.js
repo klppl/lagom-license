@@ -47,6 +47,9 @@
     root.classList.toggle('is-dark', dark);
     themeLabel.textContent = dark ? 'Midvinter' : 'Midsommar';
     themeBtn.setAttribute('aria-label', dark ? 'Switch to Midsommar (light)' : 'Switch to Midvinter (dark)');
+    // Browser chrome follows the chosen theme, not just the system one
+    var chrome = dark ? '#12151C' : '#F3EEE4';
+    ['#themeColorLight', '#themeColorDark'].forEach(function (id) { var m = $(id); if (m) m.setAttribute('content', chrome); });
   }
   themeBtn.addEventListener('click', function () {
     var next = isDark() ? 'light' : 'dark';
@@ -361,6 +364,26 @@
     var year = pYear.value.trim() || String(now.getFullYear());
     return original.replace(COPY_RE, 'Copyright (c) ' + year + ' ' + name);
   }
+  function copyrightLine() {
+    var m = personalized().match(COPY_RE);
+    return m ? m[0] : '';
+  }
+  function renderDocLine() {
+    var line = copyrightLine();
+    if (line) $('#docLineText').textContent = line;
+  }
+  // Copying or downloading with klppl's name is almost never what you meant.
+  // First attempt points at the name field; a second attempt goes ahead.
+  var nameField = $('#pNameField'), nameNudged = false;
+  function needsName() {
+    if (pName.value.trim() || nameNudged) return false;
+    nameNudged = true;
+    nameField.classList.add('is-wanted');
+    pName.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    pName.focus({ preventScroll: true });
+    toast('Add your name first. Or click again to keep klppl’s.');
+    return true;
+  }
   function esc(s) { return s.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
   function renderDoc() {
     if (!original) return;
@@ -375,6 +398,7 @@
       return para.replace(/^Copyright \(c\).*$/m, '<mark>$&</mark>');
     }).join('\n\n');
     licenseEl.innerHTML = html;
+    renderDocLine();
   }
   function loadLicense() {
     var sources = ['LICENSE', 'https://raw.githubusercontent.com/klppl/lagom-license/main/LICENSE'];
@@ -396,6 +420,11 @@
   loadLicense();
 
   var nameTimer;
+  pYear.addEventListener('input', function () {
+    var clean = pYear.value.replace(/[^0-9–\-]/g, '');
+    if (clean !== pYear.value) pYear.value = clean;
+  });
+  pName.addEventListener('input', function () { nameField.classList.remove('is-wanted'); });
   [pName, pYear].forEach(function (inp) {
     inp.addEventListener('input', function () {
       renderDoc();
@@ -417,10 +446,12 @@
 
   $('#docCopy').addEventListener('click', function () {
     if (!original) return toast('Still loading. Calmly.');
+    if (needsName()) return;
     copyText(personalized(), 'License copied. Paste it somewhere sensible.');
   });
   $('#docDownload').addEventListener('click', function () {
     if (!original) return toast('Still loading. Calmly.');
+    if (needsName()) return;
     var blob = new Blob([personalized()], { type: 'text/plain;charset=utf-8' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
