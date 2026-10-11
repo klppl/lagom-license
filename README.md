@@ -4,6 +4,8 @@
 
 An open-source license for software that doesn't try too hard.
 
+**Website:** [klppl.github.io/lagom-license](https://klppl.github.io/lagom-license/)
+
 ## What is Lagom?
 
 **Lagom** (Swedish, adj.) — not too much, not too little. Just right. (The license has a much longer definition. It knows.)

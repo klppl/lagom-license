@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Lagom License</title>
+  <meta name="description" content="An open-source license for software that doesn't try too hard. Not too much, not too little — just the right amount of freedom.">
+  <meta name="theme-color" content="#F3EEE4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12151C" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="The Lagom License">
+  <meta property="og:description" content="Not too much, not too little — just the right amount of freedom.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://klppl.github.io/lagom-license/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('lagom-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ─────────────────────────── NAV ─────────────────────────── -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="The Lagom License, back to top">
+        <span class="nav__mark" aria-hidden="true"><i></i></span>
+        <span>Lagom</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#definition">Definition</a>
+        <a href="#deal">The deal</a>
+        <a href="#fine-print">Fine print</a>
+        <a href="#use">Use it</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to Midvinter (dark)">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__label" id="themeLabel">Midsommar</span>
+        </button>
+        <a class="nav__gh" href="https://github.com/klppl/lagom-license" aria-label="View on GitHub">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ─────────────────────────── HERO ─────────────────────────── -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <ul class="hero__meta rise" style="--d:.05s">
+          <li>An open-source license</li>
+          <li>Est. 2026</li>
+          <li>No version number <span class="muted">(it would be immodest)</span></li>
+        </ul>
+
+        <h1 class="hero__title">
+          <span class="visually-hidden">The Lagom License</span>
+          <span class="hero__word" aria-hidden="true">
+            <span style="--i:0">L</span><span style="--i:1">a</span><span style="--i:2">g</span><span style="--i:3">o</span><span style="--i:4">m</span>
+          </span>
+        </h1>
+
+        <div class="hero__sub rise" style="--d:.7s">
+          <p class="hero__tagline">Not too much, not too little — <em>just the right amount of freedom.</em></p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#use">Use it in your project <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#license">Read the license</a>
+          </div>
+        </div>
+
+        <!-- The Lagom-o-meter: a spirit level -->
+        <figure class="level rise" style="--d:.9s" id="levelRoot" data-state="lagom">
+          <figcaption class="level__head">
+            <span class="eyebrow">The Lagom-o-meter</span>
+            <span class="level__hint">Drag the bubble. Find the balance.</span>
+          </figcaption>
+          <div class="level__readout">
+            <output class="level__word" id="levelWord" for="level">Lagom.</output>
+            <p class="level__quip" id="levelQuip" aria-live="polite">Not too much. Not too little. Just right.</p>
+          </div>
+          <div class="level__body" id="levelBody">
+            <div class="level__instrument">
+              <input class="level__input" type="range" id="level" min="0" max="100" step="1" value="50" aria-label="How much license do you want?" aria-valuetext="Lagom">
+              <span class="level__marks" aria-hidden="true"><i></i><i></i></span>
+              <span class="level__glint" aria-hidden="true"></span>
+            </div>
+            <ol class="level__ticks" aria-hidden="true">
+              <li style="--p:0"><span class="long">All rights reserved</span><span class="short">Reserved</span></li>
+              <li style="--p:17" class="opt">GPL</li>
+              <li style="--p:34" class="opt">MIT</li>
+              <li style="--p:50" class="is-center">Lagom</li>
+              <li style="--p:67" class="opt">WTFPL</li>
+              <li style="--p:84" class="opt">Unlicense</li>
+              <li style="--p:100">Anarchy</li>
+            </ol>
+          </div>
+          <p class="level__confetti" id="levelConfetti" aria-hidden="true">Confetti withheld. It would not be lagom.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── MARQUEE ─────────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fika</span><b>✻</b><span>Allemansrätten</span><b>✻</b><span>Jantelagen</span><b>✻</b><span>Lördagsgodis</span><b>✻</b><span>Nummerlapp</span><b>✻</b><span>Semester</span><b>✻</b><span>Kanelbulle</span><b>✻</b><span>Surströmming</span><b>✻</b><span>Älgvarning</span><b>✻</b><span>Lagom</span><b>✻</b>
+        <span>Fika</span><b>✻</b><span>Allemansrätten</span><b>✻</b><span>Jantelagen</span><b>✻</b><span>Lördagsgodis</span><b>✻</b><span>Nummerlapp</span><b>✻</b><span>Semester</span><b>✻</b><span>Kanelbulle</span><b>✻</b><span>Surströmming</span><b>✻</b><span>Älgvarning</span><b>✻</b><span>Lagom</span><b>✻</b>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────── DEFINITION ─────────────────────────── -->
+    <section class="section" id="definition">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-head__num">§ 01</span>
+          <h2 class="sec-head__title">Definition</h2>
+        </header>
+
+        <div class="def">
+          <aside class="def__entry reveal">
+            <p class="def__word">lagom</p>
+            <p class="def__phon">
+              <span class="mono">/ˈlɑ̂ːɡɔm/</span>
+              <span class="def__pos">adj., adv. · Swedish</span>
+            </p>
+            <button class="pill-btn" id="sayIt" type="button">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 00-2.5-4.03v8.05A4.5 4.5 0 0016.5 12zM14 3.23v2.06a7 7 0 010 13.42v2.06A9 9 0 0014 3.23z"/></svg>
+              Hear it — <strong>LAH-gom</strong>, not LAY-gum
+            </button>
+            <ol class="def__senses">
+              <li>Not too much, not too little.</li>
+              <li>Sufficient; adequate; appropriate.</li>
+              <li>Just right.</li>
+            </ol>
+            <p class="def__etym">
+              <span class="eyebrow">Etymology</span>
+              Possibly from <em>laget om</em>, “around the team” — Vikings passing a horn of mead around the circle, each taking exactly enough that everyone got some. Etymologists consider this unlikely. Swedes consider it beside the point.
+            </p>
+          </aside>
+
+          <div class="def__list">
+            <p class="def__lead reveal">Lagom is…</p>
+            <ul class="lines">
+              <li class="reveal">the amount of milk in your coffee that does not need to be discussed.</li>
+              <li class="reveal">the volume of a conversation on a commuter train, which is <em>none</em>.</li>
+              <li class="reveal">a salary that is fine.</li>
+              <li class="reveal">a summer house that is <span class="falu">red</span>.</li>
+              <li class="reveal">a political opinion held quietly.</li>
+              <li class="reveal">an applause that ends at the same time for everyone.</li>
+              <li class="reveal lines__bun">
+                <span>the second cinnamon bun, but never the third.</span>
+                <span class="bun" id="bun" data-count="0">
+                  <span class="bun__plate" id="bunPlate" aria-hidden="true"></span>
+                  <button class="pill-btn pill-btn--small" id="bunBtn" type="button">Have a bun</button>
+                  <span class="bun__msg" id="bunMsg" aria-live="polite"></span>
+                </span>
+              </li>
+              <li class="reveal">the Goldilocks zone, but with better furniture and meatballs.</li>
+            </ul>
+            <p class="def__coda reveal">It cannot be measured, only felt. To ask <q>how much is lagom?</q> is itself slightly un‑lagom.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── THE DEAL ─────────────────────────── -->
+    <section class="section section--alt" id="deal">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-head__num">§ 02</span>
+          <h2 class="sec-head__title">The deal</h2>
+        </header>
+
+        <div class="deal">
+          <div class="deal__intro reveal">
+            <p class="deal__two" aria-hidden="true">2</p>
+            <h3 class="deal__headline">Two rules.<br><em>Everything else is advice.</em></h3>
+            <p class="deal__lede">Just the two. More would be excessive.</p>
+          </div>
+
+          <div class="deal__rules">
+            <article class="rule reveal">
+              <span class="chip chip--req">Required · §3</span>
+              <h4>Credit the author.</h4>
+              <p>Retain the original copyright notice. One line is enough. Don’t strip it out, don’t put it in <span class="big-bold">40pt bold</span>.</p>
+            </article>
+            <article class="rule reveal">
+              <span class="chip chip--req">Required · §5</span>
+              <h4>Include the license.</h4>
+              <p>This file, or a clear reference to it, in copies of the software. It’s just polite.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="grants">
+          <article class="grant reveal">
+            <span class="grant__icon" aria-hidden="true">✓</span>
+            <h4>Use it</h4>
+            <p>For any purpose, commercial or otherwise. The Author trusts you to be reasonable. Be unreasonable if you must.</p>
+          </article>
+          <article class="grant reveal">
+            <span class="grant__icon" aria-hidden="true">✓</span>
+            <h4>Share it</h4>
+            <p>Copy, publish, sublicense, sell — original or modified. Don’t make a big deal of it in either direction. Just put it there.</p>
+          </article>
+          <article class="grant reveal">
+            <span class="grant__icon" aria-hidden="true">✓</span>
+            <h4>Change it</h4>
+            <p>As much as you like. Rewrite it entirely and call it a fork. That’s between you and your conscience. Your conscience knows what lagom means.</p>
+          </article>
+          <article class="grant grant--no reveal">
+            <span class="grant__icon" aria-hidden="true">✗</span>
+            <h4>Not required</h4>
+            <p>Sharing your modifications <span class="muted">(but hoarding is not lagom)</span>. Feeling guilty about anything <span class="muted">(guilt is never lagom)</span>.</p>
+          </article>
+        </div>
+
+        <div class="nice reveal">
+          <div class="nice__head">
+            <h3>Things that are not required <em>but would be nice</em></h3>
+            <p class="nice__progress" id="niceProgress" aria-live="polite">0 of 6. No pressure.</p>
+          </div>
+          <ul class="nice__list" id="niceList">
+            <li><label><input type="checkbox" value="human"><span class="tick" aria-hidden="true"></span>Be a decent human being</label></li>
+            <li><label><input type="checkbox" value="walk"><span class="tick" aria-hidden="true"></span>Take a walk sometimes</label></li>
+            <li><label><input type="checkbox" value="water"><span class="tick" aria-hidden="true"></span>Drink water</label></li>
+            <li><label><input type="checkbox" value="friday"><span class="tick" aria-hidden="true"></span>Push to main on Fridays only if it feels lagom</label></li>
+            <li><label><input type="checkbox" value="empire"><span class="tick" aria-hidden="true"></span>Power a modest regional empire, at most. Not a galactic one.</label></li>
+            <li><label><input type="checkbox" value="sensitive"><span class="tick" aria-hidden="true"></span>Don’t modify it so much the Author feels inadequate. The Author is sensitive.</label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── FINE PRINT ─────────────────────────── -->
+    <section class="section" id="fine-print">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-head__num">§ 03</span>
+          <h2 class="sec-head__title">The fine print, <em>which is lovely</em></h2>
+        </header>
+
+        <div class="bento">
+          <!-- Allemansrätten -->
+          <article class="card card--roam reveal">
+            <svg class="forest" viewBox="0 0 600 160" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+              <g class="forest__far">
+                <path d="M20 140 L50 60 L80 140Z M70 140 L105 40 L140 140Z M150 140 L175 75 L200 140Z M420 140 L455 50 L490 140Z M480 140 L510 70 L540 140Z M540 140 L575 45 L610 140Z"/>
+              </g>
+              <g class="forest__near">
+                <path d="M110 160 L150 55 L190 160Z M190 160 L222 85 L254 160Z M360 160 L398 60 L436 160Z M440 160 L470 90 L500 160Z"/>
+              </g>
+              <path class="forest__path" d="M300 160 C 290 140, 320 128, 300 112 C 285 100, 305 92, 300 84" fill="none"/>
+              <g class="forest__gate">
+                <path d="M262 160 V118 M338 160 V118 M262 124 H338 M262 140 H338 M262 124 L338 140"/>
+              </g>
+              <circle class="forest__berry" cx="235" cy="152" r="4"/><circle class="forest__berry" cx="243" cy="155" r="3.5"/>
+              <circle class="forest__berry" cx="356" cy="153" r="4"/>
+            </svg>
+            <span class="card__kicker">Allemansrätten · The right to roam</span>
+            <h3>Roam freely through the codebase, as through any Swedish forest.</h3>
+            <p>Pick berries (snippets) and mushrooms (helper functions). No warranty that the mushrooms aren’t poisonous. Leave no trace. Don’t camp in one file for more than one night. <strong>Close the gate behind you.</strong></p>
+          </article>
+
+          <!-- Queue ticket -->
+          <article class="card card--queue reveal">
+            <span class="card__kicker">Nummerlapp · The queue</span>
+            <div class="queue">
+              <div class="queue__display" aria-live="polite">
+                <span class="queue__label">Nu betjänas</span>
+                <span class="queue__now" id="queueNow">042</span>
+              </div>
+              <div class="queue__machine">
+                <button class="queue__take" id="queueTake" type="button">Ta en nummerlapp <span>Take a ticket</span></button>
+                <div class="queue__slot"></div>
+              </div>
+              <div class="ticket" id="ticket" hidden><span class="ticket__label">Ditt nummer</span><span class="ticket__num" id="ticketNum">000</span><span class="ticket__note" id="ticketNote" aria-live="polite">Estimated wait: lagom.</span></div>
+            </div>
+            <p class="card__small">Issues are handled in order of their queue ticket number. <button class="link-btn" id="cutQueue" type="button">Cut the queue?</button></p>
+            <p class="queue__guilt" id="queueGuilt" aria-live="polite" hidden>The only truly unforgivable act. The Author will not say anything about it. The Author will think about it, at length, for years.</p>
+          </article>
+
+          <!-- Jantelagen -->
+          <article class="card card--jante reveal">
+            <span class="card__kicker">Jantelagen</span>
+            <p class="jante">You shall not think you are better than this Software.<br>The Software does not think it is better than you.<br>Nobody here thinks they are anything special.</p>
+            <p class="card__small">This card is exactly as big as it needs to be. That is the point.</p>
+          </article>
+
+          <!-- Assembly -->
+          <article class="card card--assembly reveal">
+            <span class="card__kicker">Assembly instructions</span>
+            <ol class="flatpack" aria-label="Wordless assembly instructions">
+              <li aria-label="Step one: a flat box">
+                <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M8 40 L40 52 L72 40 L40 28Z M8 40 V46 L40 58 V52 M72 40 V46 L40 58"/></svg>
+              </li>
+              <li aria-label="Step two: a calm person with an Allen key">
+                <svg viewBox="0 0 80 64" aria-hidden="true"><circle cx="30" cy="14" r="7"/><path d="M30 21 V40 M30 40 L22 58 M30 40 L38 58 M30 27 L44 34 L52 30 M52 30 L52 24 M25 13 h0.1 M35 13 h0.1 M27 17 q3 2 6 0"/></svg>
+              </li>
+              <li aria-label="Step three: a finished stool">
+                <svg viewBox="0 0 80 64" aria-hidden="true"><path d="M18 26 H62 V32 H18Z M24 32 L20 58 M56 32 L60 58 M30 46 H50"/></svg>
+              </li>
+            </ol>
+            <p>Ships flat-packed. The instructions are wordless and feature a small cartoon person who seems calmer than you.</p>
+            <button class="screw" id="screw" type="button" aria-describedby="screwMsg">
+              <svg viewBox="0 0 64 24" width="64" height="24" aria-hidden="true"><circle cx="10" cy="12" r="8"/><path d="M6 12 H14 M10 8 V16" class="screw__slot"/><path d="M18 9 H52 L60 12 L52 15 H18Z M24 9 L22 15 M30 9 L28 15 M36 9 L34 15 M42 9 L40 15 M48 9 L46 15" class="screw__shaft"/></svg>
+              <span>1 leftover screw</span>
+            </button>
+            <p class="screw__msg" id="screwMsg" aria-live="polite"></p>
+          </article>
+
+          <!-- July -->
+          <article class="card card--july reveal">
+            <span class="card__kicker">Support hours</span>
+            <div class="july">
+              <div class="july__cal" id="julyCal" aria-hidden="true"></div>
+              <div class="july__side">
+                <svg class="house" viewBox="0 0 120 90" aria-hidden="true">
+                  <path class="house__roof" d="M8 42 L60 8 L112 42Z"/>
+                  <rect class="house__body" x="16" y="40" width="88" height="46"/>
+                  <path class="house__trim" d="M16 40 V86 M104 40 V86 M8 42 L60 8 L112 42"/>
+                  <rect class="house__win" x="26" y="52" width="18" height="16"/>
+                  <rect class="house__win" x="76" y="52" width="18" height="16"/>
+                  <path class="house__trim" d="M35 52 V68 M26 60 H44 M85 52 V68 M76 60 H94"/>
+                  <rect class="house__door" x="52" y="56" width="16" height="30"/>
+                  <rect class="house__chim" x="80" y="14" width="8" height="16"/>
+                </svg>
+              </div>
+            </div>
+            <h3>No support in July. <em>All of July.</em></h3>
+            <p>Issues filed in July will be read in August, by an Author with a tan and no memory of having written this code.</p>
+            <p class="status" id="julyStatus"></p>
+          </article>
+
+          <!-- Lördagsgodis -->
+          <article class="card card--candy reveal">
+            <span class="card__kicker">Releases · Lördagsgodis</span>
+            <div class="bags" aria-hidden="true">
+              <svg class="bag bag--small" viewBox="0 0 60 80"><path d="M10 18 L50 18 L54 74 L6 74Z"/><path d="M10 18 L16 6 L44 6 L50 18" class="bag__top"/><circle cx="22" cy="44" r="4"/><circle cx="36" cy="52" r="4"/><circle cx="28" cy="60" r="4"/></svg>
+              <svg class="bag bag--big" viewBox="0 0 60 80"><path d="M10 18 L50 18 L54 74 L6 74Z"/><path d="M10 18 L16 6 L44 6 L50 18" class="bag__top"/><path d="M2 2 L58 78" class="bag__no"/></svg>
+            </div>
+            <h3>Breaking changes on Saturdays, in moderation.</h3>
+            <p>A small bag. Not the big bag.</p>
+            <p class="status" id="candyStatus"></p>
+          </article>
+
+          <!-- Moose -->
+          <article class="card card--moose reveal">
+            <div class="moose-sign" aria-hidden="true">
+              <svg viewBox="0 0 120 106"><path d="M60 6 L114 100 H6Z" class="moose-sign__edge"/><path d="M60 20 L101 92 H19Z" class="moose-sign__face"/></svg>
+              <span class="moose-sign__glyph">🫎</span>
+            </div>
+            <span class="card__kicker">Limitation of liability</span>
+            <p>If this code deletes your database, burns your toast, causes an international incident, or collides with a moose, that is between you and your backup strategy.</p>
+            <p class="card__punch">The Author has no control over moose. <em>Nobody does.</em></p>
+          </article>
+
+          <!-- Surströmming -->
+          <article class="card card--fish reveal">
+            <span class="card__kicker">Hazardous materials</span>
+            <div class="hazard" aria-hidden="true"><span>Legacy file</span></div>
+            <p>Certain legacy files are like surströmming.</p>
+            <ul class="hazard__rules">
+              <li>Open outdoors</li>
+              <li>Downwind</li>
+              <li>With a friend</li>
+              <li>Never on a plane</li>
+            </ul>
+          </article>
+
+          <!-- Laundry room note -->
+          <article class="card card--note reveal">
+            <span class="card__kicker">Dispute resolution</span>
+            <p>First: coffee, a cinnamon bun, a lagom resolution. Failing that, escalate in the traditional manner.</p>
+            <div class="note">
+              <span class="note__tape" aria-hidden="true"></span>
+              <p>To whoever keeps leaving lint in the filter. Some of us have to live here too.</p>
+              <p class="note__sig">/A neighbour</p>
+            </div>
+            <p class="card__small">No names. No eye contact. Ever. If that fails, Stockholm District Court. Litigation is never lagom, but it is available.</p>
+          </article>
+
+          <!-- Termination -->
+          <article class="card card--pause reveal">
+            <span class="card__kicker">Termination</span>
+            <div class="pause" aria-hidden="true"><i></i><i></i></div>
+            <h3>Paused, not revoked.</h3>
+            <p>Perpetual and irrevocable, because termination is too dramatic. Strip the attribution and your rights pause, like a coffee break you did not choose. Restore it and all is forgiven. <em>Grudges are not lagom.</em></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── FIKA BAND ─────────────────────────── -->
+    <section class="fika-band" aria-labelledby="fikaTitle">
+      <div class="wrap fika-band__inner">
+        <svg class="cup" viewBox="0 0 120 120" aria-hidden="true">
+          <path class="cup__steam" d="M48 34 c-6 -8 6 -12 0 -22"/>
+          <path class="cup__steam" d="M62 34 c-6 -8 6 -12 0 -22"/>
+          <path class="cup__steam" d="M76 34 c-6 -8 6 -12 0 -22"/>
+          <path class="cup__body" d="M28 44 H96 V72 a30 30 0 0 1 -30 30 H58 a30 30 0 0 1 -30 -30Z"/>
+          <path class="cup__handle" d="M96 52 h6 a12 12 0 0 1 0 24 h-8"/>
+          <path class="cup__saucer" d="M14 108 H110"/>
+        </svg>
+        <div>
+          <p class="eyebrow eyebrow--light">The Lagom Clause</p>
+          <h2 id="fikaTitle">Using this software too much? <em>Step away. Have a fika.</em></h2>
+          <p>Return when balance has been restored. Using it too little? Use it a little more. Not too much.</p>
+        </div>
+        <button class="btn btn--paper" id="fikaOpen" type="button">Take a fika <span aria-hidden="true">☕</span></button>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── USE IT ─────────────────────────── -->
+    <section class="section" id="use">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <span class="sec-head__num">§ 04</span>
+          <h2 class="sec-head__title">Use it <em>(some assembly required)</em></h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__n">1</span>
+            <h3>Take the file.</h3>
+            <p>Drop it in the root of your project as <code>LICENSE</code>.</p>
+            <div class="code">
+              <code id="curlCmd">curl -o LICENSE https://raw.githubusercontent.com/klppl/lagom-license/main/LICENSE</code>
+              <button class="copy" type="button" data-copy="#curlCmd">Copy</button>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">2</span>
+            <h3>Put your name on it.</h3>
+            <p>Replace the copyright line at the bottom with your own. Or type it below and we’ll do it for you.</p>
+            <div class="personal">
+              <label class="field">
+                <span>Your name</span>
+                <input id="pName" type="text" placeholder="Astrid Lindgren" autocomplete="name" spellcheck="false">
+              </label>
+              <label class="field field--year">
+                <span>Year</span>
+                <input id="pYear" type="text" inputmode="numeric" maxlength="9">
+              </label>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__n">3</span>
+            <h3>Don’t overthink it.</h3>
+            <p>That’s it. If you have one leftover screw, that is normal. It goes nowhere.</p>
+            <div class="badge-row">
+              <img src="https://img.shields.io/badge/license-lagom-9E2B25" alt="License: Lagom badge" width="98" height="20" loading="lazy">
+              <button class="copy" type="button" data-copy-text="[![License: Lagom](https://img.shields.io/badge/license-lagom-9E2B25)](https://klppl.github.io/lagom-license/)">Copy badge markdown</button>
+            </div>
+          </li>
+        </ol>
+
+        <!-- The full license -->
+        <div class="doc-wrap" id="license">
+          <div class="doc-bar reveal">
+            <div>
+              <p class="eyebrow">The license, in full</p>
+              <p class="doc-bar__sub">A lagom length. Slightly over, actually. It knows.</p>
+            </div>
+            <div class="doc-bar__actions">
+              <button class="btn btn--small" type="button" id="docCopy">Copy</button>
+              <button class="btn btn--small" type="button" id="docDownload">Download</button>
+              <a class="btn btn--small btn--ghost" href="https://github.com/klppl/lagom-license/blob/main/LICENSE">On GitHub ↗</a>
+            </div>
+          </div>
+          <article class="doc reveal" id="doc" data-collapsed="true">
+            <pre class="doc__text" id="licenseText">Loading the license. Calmly.</pre>
+            <div class="doc__fade">
+              <button class="pill-btn" type="button" id="docExpand" aria-expanded="false" aria-controls="doc">Read all of it</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__big">Keep it <em>lagom.</em></p>
+      <p class="footer__lede">Do what is sensible. Don’t be a hero, and don’t be a nuisance.</p>
+      <div class="footer__row">
+        <p>Free as in speech, free as in beer, free as in that IKEA pencil you definitely did not steal.</p>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="https://github.com/klppl/lagom-license">GitHub</a>
+          <a href="https://raw.githubusercontent.com/klppl/lagom-license/main/LICENSE">Raw LICENSE</a>
+          <a href="#top" class="footer__gate">Close the gate behind you ↑</a>
+        </nav>
+      </div>
+      <p class="footer__copy">Copyright © 2026 <a href="https://github.com/klppl">klppl</a>. One line is enough.</p>
+    </div>
+  </footer>
+
+  <!-- ─────────────────────────── FIKA DIALOG ─────────────────────────── -->
+  <dialog class="fika" id="fika" aria-labelledby="fikaDlgTitle">
+    <div class="fika__inner">
+      <svg class="cup cup--big" viewBox="0 0 120 120" aria-hidden="true">
+        <path class="cup__steam" d="M48 34 c-6 -8 6 -12 0 -22"/>
+        <path class="cup__steam" d="M62 34 c-6 -8 6 -12 0 -22"/>
+        <path class="cup__steam" d="M76 34 c-6 -8 6 -12 0 -22"/>
+        <path class="cup__body" d="M28 44 H96 V72 a30 30 0 0 1 -30 30 H58 a30 30 0 0 1 -30 -30Z"/>
+        <path class="cup__handle" d="M96 52 h6 a12 12 0 0 1 0 24 h-8"/>
+        <path class="cup__saucer" d="M14 108 H110"/>
+      </svg>
+      <h2 id="fikaDlgTitle">Fika.</h2>
+      <p class="fika__line" id="fikaLine">Breathe in. The code will still be there.</p>
+      <p class="fika__timer mono" id="fikaTimer">0:00</p>
+      <form method="dialog">
+        <button class="btn btn--primary" type="submit" autofocus>Balance restored</button>
+      </form>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
