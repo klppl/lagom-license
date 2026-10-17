@@ -1,5 +1,7 @@
 # The Lagom License
 
+[![License: Lagom](https://img.shields.io/badge/license-lagom-9E2B25)](https://klppl.github.io/lagom-license/)
+
 *Not too much, not too little — just the right amount of freedom.*
 
 An open-source license for software that doesn't try too hard.
